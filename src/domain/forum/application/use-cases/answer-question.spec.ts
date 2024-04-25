@@ -17,7 +17,9 @@ describe("Create Answer", () => {
       content: "Conteúdo da resposta",
     });
 
-    expect(result.isRight).toBe(true);
-    expect(inMemoryAnswersRepository.items[0].id).toEqual(result.value?.answer);
+    expect(result.isRight()).toBe(true);
+    expect(inMemoryAnswersRepository.items[0].id).toEqual(
+      result.value?.answer.id,
+    );
   });
 });
