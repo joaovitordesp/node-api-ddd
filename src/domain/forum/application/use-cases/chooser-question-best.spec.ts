@@ -9,9 +9,9 @@ import { InMemoryQuestionAttachmentsRepository } from "test/repositories/in-memo
 import { InMemoryAnswerAttachmentsRepository } from "test/repositories/in-memory-answer-attachments-repository";
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository;
+let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentsRepository;
 let inMemoryQuestionsRepository: InMemoryQuestionsRepository;
 let inMemoryAnswersRepository: InMemoryAnswersRepository;
-let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentsRepository;
 let sut: ChooseQuestionBestUseCase;
 
 describe("Choose Question Best Answer", () => {
@@ -50,7 +50,7 @@ describe("Choose Question Best Answer", () => {
 
     expect(inMemoryQuestionsRepository.items[0].bestAnswerId).toEqual(
       answer.id,
-    ); // força um erro
+    );
   });
 
   it("should not be able to to choose another user question best answer", async () => {
