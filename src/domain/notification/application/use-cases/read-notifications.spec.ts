@@ -13,7 +13,7 @@ describe("Send notification", () => {
     sut = new ReadNotificationUseCase(inMemoryNotificationRepository);
   });
 
-  it("should be able to read a notification", () => {
+  it("should be able to read a notification", async () => {
     const notification = makeNotification();
 
     inMemoryNotificationRepository.create(notification);
